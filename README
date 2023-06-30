@@ -1,0 +1,23 @@
+Leaks {
+en Main.c:
+	void	leaks(void)
+{
+	system("leaks -q push_swap");
+}
+
+y dentro del int main(args), justo después de declarar los dos Stacks:
+	atexit(leaks);
+}
+
+Push_Swap_Tester {
+	bash loop.sh 100 10 / bash loop.sh 500 10
+	{
+		Generas 10 pruebas con 100/500 números al azar.
+	}
+	bash debug.sh 9 4 8 7 / bash debug.sh random #
+	{
+		Puedes ver el paso a paso del movimiento entre Stacks.
+	}
+}
+
+En las correcciones, modificar el Checker_OS, por Checker_Mac.
